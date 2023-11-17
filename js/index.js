@@ -40,6 +40,7 @@ $(document).ready(async function () {
 
     }
     
+    
     function listarProdutos(){
         
         let listProdutos = '';
@@ -51,15 +52,15 @@ $(document).ready(async function () {
                 var nomeProd = produtos.registros[index].nome;
                 
                 if(produtos.registros[index].status = 'Ativo'){
-                    
-                    listProdutos += `<div class="alert alert-light p-2" role="alert">
+
+                    listProdutos += `<div class="alert alert-light p-2" role="alert" onclick="location.assign('${produtos.registros[index].link}')">
                                         <table class="w-100">
                                             <tr>
                                                 <td rowspan="2" class="w-60px text-center p-0"><img src="img_prod/${produtos.registros[index].imagem}" class="rounded-3 img_prod"></td>
                                                 <td class="ps-2 text-relevo-black">${produtos.registros[index].produto}</td>
                                             </tr>
                                             <tr>                    
-                                                <td class="ps-2 fs-7">${nomeProd.substring(1, 35)}...</td>
+                                                <td class="ps-2 fs-7">${nomeProd.substring(0, 35)}...</td>
                                             </tr>
                                         </table>
                                         
