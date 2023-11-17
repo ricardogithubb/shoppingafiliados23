@@ -53,7 +53,7 @@ $(document).ready(async function () {
                 
                 if(produtos.registros[index].status = 'Ativo'){
 
-                    listProdutos += `<div class="alert alert-light p-2" role="alert" onclick="location.assign('${produtos.registros[index].link}')">
+                    listProdutos += `<div class="alert alert-light p-2" role="alert" onclick="window.open('${produtos.registros[index].link}','_blank')">
                                         <table class="w-100">
                                             <tr>
                                                 <td rowspan="2" class="w-60px text-center p-0"><img src="img_prod/${produtos.registros[index].imagem}" class="rounded-3 img_prod"></td>
